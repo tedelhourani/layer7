@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D162711F19982319003BA574 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D162711E19982319003BA574 /* main.c */; };
+		D11F5BBF1998296200D84454 /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = D11F5BBE1998296200D84454 /* client.c */; };
+		D11F5BC11998356C00D84454 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = D11F5BC01998356C00D84454 /* server.c */; };
 		D162712119982319003BA574 /* layer7.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D162712019982319003BA574 /* layer7.1 */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +26,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D11F5BBE1998296200D84454 /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		D11F5BC01998356C00D84454 /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
+		D11F5BC219983D0700D84454 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		D162711B19982319003BA574 /* layer7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = layer7; sourceTree = BUILT_PRODUCTS_DIR; };
-		D162711E19982319003BA574 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D162712019982319003BA574 /* layer7.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = layer7.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,8 +63,10 @@
 		D162711D19982319003BA574 /* layer7 */ = {
 			isa = PBXGroup;
 			children = (
-				D162711E19982319003BA574 /* main.c */,
 				D162712019982319003BA574 /* layer7.1 */,
+				D11F5BBE1998296200D84454 /* client.c */,
+				D11F5BC01998356C00D84454 /* server.c */,
+				D11F5BC219983D0700D84454 /* readme */,
 			);
 			path = layer7;
 			sourceTree = "<group>";
@@ -117,7 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D162711F19982319003BA574 /* main.c in Sources */,
+				D11F5BC11998356C00D84454 /* server.c in Sources */,
+				D11F5BBF1998296200D84454 /* client.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +233,7 @@
 				D162712619982319003BA574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
