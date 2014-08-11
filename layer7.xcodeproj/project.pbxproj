@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		D11F5BBE1998296200D84454 /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
 		D11F5BC01998356C00D84454 /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
-		D11F5BC219983D0700D84454 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
+		D11F5BC219983D0700D84454 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme; path = layer7/readme; sourceTree = "<group>"; };
 		D162711B19982319003BA574 /* layer7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = layer7; sourceTree = BUILT_PRODUCTS_DIR; };
 		D162712019982319003BA574 /* layer7.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = layer7.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +47,7 @@
 		D162711219982319003BA574 = {
 			isa = PBXGroup;
 			children = (
+				D11F5BC219983D0700D84454 /* readme */,
 				D162711D19982319003BA574 /* layer7 */,
 				D162711C19982319003BA574 /* Products */,
 			);
@@ -66,7 +67,6 @@
 				D162712019982319003BA574 /* layer7.1 */,
 				D11F5BBE1998296200D84454 /* client.c */,
 				D11F5BC01998356C00D84454 /* server.c */,
-				D11F5BC219983D0700D84454 /* readme */,
 			);
 			path = layer7;
 			sourceTree = "<group>";
