@@ -3,8 +3,19 @@
 //  layer7
 //
 //  Created by Theodore Elhourani.
-//  Copyright (c) 2009 Theodore Elhourani. All rights reserved.
+//  Copyright (c) 2009 Theodore Elhourani.
 //
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software Foundation,
+// Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -110,19 +121,15 @@ tcp_flow(void *arg)
             accept_error();
             exit( 0 );
         }
-        
         setsockopt (client_sd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
         memset(message_buffer, 0, MAX_MESSAGE_SIZE);
-        
         // Receive message from client
         if ((message_size = recv(client_sd, message_buffer, MAX_MESSAGE_SIZE, 0)) < 0)
         {
             receive_error();
             exit( 0 );
         }
-        //  printf("size %d\n",message_size);
         total_bytes += message_size;
-        
         // Send received string and receive again until end of transmission
         while ( message_size > 0)      // zero indicates end of transmission
         {
@@ -131,7 +138,7 @@ tcp_flow(void *arg)
             if ((message_size = recv(client_sd, message_buffer, MAX_MESSAGE_SIZE, 0)) < 0)
             {
                 receive_error();
-                exit( 0 );
+                exit(1);
             }
             total_bytes += message_size;
         }
@@ -167,12 +174,12 @@ main(int argc, char** argv)
                 if( NUM_FLOWS > MAX_FLOWS )
                 {
                     printf("More flows than allowed error !\n");
-                    exit( 0 );
+                    exit(1);
                 }
                 break;
             default:
                 usage( argv[0] );
-                exit( 0 );
+                exit(1);
         }
     }
     
@@ -182,7 +189,7 @@ main(int argc, char** argv)
         if( message_buffer[i] == NULL )
         {
             printf("Error allocating message buffer !");
-            exit( 0 );
+            exit(1);
         }
     }
     
